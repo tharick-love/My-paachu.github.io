@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>For Paachu ❤️</title>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Georgia', serif;
+      background: linear-gradient(to bottom, #ff758c, #ff7eb3);
+      color: #fff;
+      text-align: center;
+      overflow-x: hidden;
+    }
+
+    .container {
+      padding: 50px 20px;
+    }
+
+    h1 {
+      font-size: 3em;
+      margin-bottom: 10px;
+    }
+
+    h2 {
+      font-weight: normal;
+      margin-top: 40px;
+    }
+
+    p {
+      font-size: 1.3em;
+      line-height: 1.7;
+      max-width: 750px;
+      margin: auto;
+    }
+
+    .date {
+      font-size: 1em;
+      opacity: 0.9;
+      margin-bottom: 25px;
+    }
+
+    img {
+      width: 260px;
+      border-radius: 20px;
+      margin: 25px 0;
+      box-shadow: 0 12px 30px rgba(0,0,0,0.35);
+    }
+
+    .heart {
+      font-size: 4em;
+      animation: beat 1s infinite;
+      margin: 20px 0;
+    }
+
+    @keyframes beat {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.25); }
+    }
+
+    button {
+      background: #fff;
+      color: #ff4f7a;
+      border: none;
+      padding: 16px 35px;
+      font-size: 1.2em;
+      border-radius: 40px;
+      cursor: pointer;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+    }
+
+    button:hover {
+      background: #ffe3ea;
+    }
+
+    .buttons {
+      margin-top: 35px;
+      position: relative;
+      height: 140px;
+    }
+
+    #noBtn {
+      position: absolute;
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Background Music -->
+  <audio autoplay loop>
+    <source src="love.mp3" type="audio/mpeg">
+  </audio>
+
+  <div class="container">
+    <h1>Paachu ❤️</h1>
+    <div class="date">Since October 5</div>
+
+    <p>
+      From the moment you entered my life,  
+      love stopped being just a word and became a feeling I live every day.
+    </p>
+
+    <img src="photo.jpg" alt="Us Together">
+
+    <p>
+      We’ve laughed, we’ve fought, we’ve grown —  
+      but through everything, my heart has always chosen you.
+    </p>
+
+    <div class="heart">❤️</div>
+
+    <p>
+      I don’t know what the future holds,  
+      but I know one thing for sure —  
+      I want every version of my tomorrow to include you.
+    </p>
+
+    <h2>Will you be mine, today and always?</h2>
+
+    <div class="buttons">
+      <button onclick="yesClicked()">YES 💍</button>
+      <button id="noBtn" onmouseover="moveNo()">NO 🙈</button>
+    </div>
+  </div>
+
+  <script>
+    function moveNo() {
+      const noBtn = document.getElementById("noBtn");
+      const container = document.querySelector(".buttons");
+
+      const maxX = container.offsetWidth - noBtn.offsetWidth;
+      const maxY = container.offsetHeight - noBtn.offsetHeight;
+
+      const randomX = Math.random() * maxX;
+      const randomY = Math.random() * maxY;
+
+      noBtn.style.left = randomX + "px";
+      noBtn.style.top = randomY + "px";
+    }
+
+    function yesClicked() {
+      alert("YAYYYY ❤️ I knew it! I love you endlessly, Paachu 💍");
+    }
+  </script>
+
+</body>
+</html>
